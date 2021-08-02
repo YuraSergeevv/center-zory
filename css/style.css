@@ -370,7 +370,7 @@ textarea.error {
   height: 650px;
 }
 .main .swiper-container .swiper-slide {
-  background-image: url("/img/swiper.jpg");
+  background-image: url("../img/swiper.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -457,7 +457,7 @@ textarea.error {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #ff0000;
-  background-image: url("/img/services/bg-serv.jpg");
+  background-image: url("../img/services/bg-serv.jpg");
   position: relative;
   border-bottom: 2px solid #3ead43;
 }
