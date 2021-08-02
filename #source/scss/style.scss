@@ -1,0 +1,230 @@
+// <ПОДКЛЮЧЕНИЕ MIXIN>------------------------------------------------------
+@import "mixin.scss";
+// <ПОДКЛЮЧЕНИЕ MIXIN>------------------------------------------------------
+
+// <ШРИФТЫ>-----------------------------------------------------------------
+
+// <подключаем шрифты>------------------------------------------------------
+@import "fonts.scss";
+// </подключаем шрифты>-----------------------------------------------------
+
+// <шрифт по умолчанию>-----------------------------------------------------
+$font-family: "Montserrat";
+// </шрифт по умолчанию>----------------------------------------------------
+
+// </ШРИФТЫ>----------------------------------------------------------------
+
+// <ПЕРЕМЕННЫЕ>-------------------------------------------------------------
+$max-width: 1240;
+$min-width: 320;
+$body-font-size: 14;
+$padd-container: 20;
+$color_1: #3ead43;
+$color_2: #dd861e;
+$color_text: #ffffff;
+// </ПЕРЕМЕННЫЕ>------------------------------------------------------------
+
+// <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>---------------------------------------------
+@import "resize-style.scss";
+// </ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>---------------------------------------------
+
+// <BODY>--------------------------------------------------------------------
+body {
+    line-height: 1.25;
+    font-size: $body-font-size+px;
+    font-family: $font-family;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+a{
+    color: inherit;
+}
+p{
+    font-family: 'Roboto';
+    font-size: 17px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+// </BODY>--------------------------------------------------------------------
+
+// <ОБОЛОЧКА>----------------------------------------------------------------
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+}
+
+// </ОБОЛОЧКА>---------------------------------------------------------------
+
+// <КОНТЕЙНЕР>---------------------------------------------------------------
+.container {
+    max-width: $max-width+px;
+    margin: 0 auto;
+    padding: 0 $padd-container+px;
+}
+
+// </КОНТЕЙНЕР>--------------------------------------------------------------
+
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>---------------------------
+@import "class.scss";
+// </ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>--------------------------
+
+// <ШАПКА>-------------------------------------------------------------------
+@import 'header.scss';
+// </ШАПКА>------------------------------------------------------------------
+
+// <ОСНОВНОЙ БЛОК>-----------------------------------------------------------
+
+input,
+textarea {
+    &.error {
+        border-color: red;
+    }
+}
+
+// </ОСНОВНОЙ БЛОК>----------------------------------------------------------
+
+// <404>---------------------------------------------------------------------
+//===========================================================================
+// </404>--------------------------------------------------------------------
+
+// <ПОДВАЛ>------------------------------------------------------------------
+@import "button.scss";
+@import "main.scss";
+@import "appointment.scss";
+@import "services.scss";
+@import "service.scss";
+
+@import "footer.scss";
+// </ПОДВАЛ>-----------------------------------------------------------------
+
+// <ПОПАП>-------------------------------------------------------------------
+@import "popup.scss";
+// </ПОПАП>------------------------------------------------------------------
+
+// <ПРОКРУТКА ВВЕРХ>---------------------------------------------------------
+.scroll-up {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 100;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 3px #dcdcdc;
+    @include anim(0.4s, 0s);
+    transform: translateY(25px);
+    opacity: 0;
+    visibility: hidden;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        border: 3px solid red;
+        width: 10px;
+        height: 10px;
+        border-right-width: 0;
+        border-bottom-width: 0;
+        transition: inherit;
+        opacity: 0.6;
+    }
+
+    &__path {
+        box-sizing: border-box;
+        fill: none;
+        stroke: red;
+        stroke-width: 3px;
+        @include anim(0.4s, 0s);
+    }
+
+    &.scroll-up_active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    &:hover {
+        &:before {
+            border-color: red;
+            opacity: 1;
+        }
+    }
+}
+
+// </ПРОКРУТКА ВВЕРХ>--------------------------------------------------------
+.main_title{
+    color: #070707;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    position: relative;
+    font-size: 29px;
+    text-align: center;
+    &::after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        height: 5px;
+        width: 250px;
+        background: linear-gradient(90deg, rgba(62,173,67,0) 0%, rgba(62,173,67,1) 100%);
+
+    }
+    span{
+        font-weight: 700;
+    }
+    &.white{
+        color: #ffffff;
+    }
+}
+.more{
+    font-size: 22px;
+    font-weight: 800;
+    color: #4AB24F;
+}
+.title_block{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #eaf4ea;
+    .title{
+        color: #333333;
+        margin-bottom: 10px;
+        font-size: 32px;
+    }
+}
+.breadcrumbs{
+    display: flex;
+    align-items: center;
+    .breadcrumbs_item{
+        position: relative;
+        padding-right: 15px;
+        margin-right: 10px;
+        font-size: 13px;
+        &::after{
+            content: '>';
+            position: absolute;
+            pointer-events: none;
+            top: 50%;
+            right:0px;
+            transform: translateY(-50%);
+        }
+        &:last-of-type{
+            padding-right: 0;
+            margin-right: 0;
+            &::after{
+                display: none;
+            }
+        }
+    }
+}
+
+// <ПОДКЛЮЧЕНИЕ МЕДИАЗАПРОСОВ>-----------------------------------------------
+@import "media.scss";
+// </ПОДКЛЮЧЕНИЕ МЕДИАЗАПРОСОВ>----------------------------------------------

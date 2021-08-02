@@ -1,0 +1,121 @@
+.header{
+   
+   .header_top{
+    padding: 8px 0;
+    background-color: $color_1;
+    .top_row{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+        font-size: 15px;
+        color:#ffffff;
+    }
+    .block_phones{
+        display: flex;
+        .phone +.phone{
+            margin-left: 10px;
+        }
+    }
+    .block_info{
+        display: flex;
+        .info_item+.info_item{
+            margin-left: 10px;
+        }
+    }
+   }
+   .header_bottom{
+       .bottom_row{
+           display: flex;
+            justify-content: space-between;
+       }
+       .logo_block{
+           position: relative;
+           width: 180px;
+       }
+       .logo{
+           position: absolute;
+           width: inherit;
+           height: 195px;
+           top: 0;
+           left: 0;
+           padding: 0 10px 5px;
+           transition: 0.4s;
+           background-color: rgba(255,255,255,0.3);
+           z-index: 100;
+           box-shadow:  0px 45px 50px 0px rgba(0, 0, 0, 0.27);
+           img{
+               width: 100%;
+               height: 100%;
+               object-fit: contain;
+           }
+           &:hover{
+               opacity: 0.7;
+           }
+       }
+       .navigation_bar{
+           display: flex;
+           align-items: center;
+       }
+       .menu_list{
+           display: flex;
+       }
+       .menu_item{
+           padding: 0 14px;
+       }
+       .menu_link{
+           font-family: 'Roboto';
+           font-weight: 500;
+           font-size: 16px;
+           color: $color_1;
+           transition: 0.4s;
+           &:hover{
+            color: $color_2;
+           }
+           &.active{
+               color: $color_2;
+           }
+       }
+       .sign_up{
+           color: #ffffff;
+           font-size: 16px;
+           font-weight: 600;
+           background-color: $color_2;
+           padding: 14px;
+           height: 90px;
+           display: flex;
+           align-items: center;
+
+       }
+       .language{
+           display: flex;
+       }
+       .language_item{
+           margin: 0 14px;
+           width: 24px;
+           height: 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+       }
+       .ru{
+           background-image: url("/img/country/ukraine.png");
+       }
+       .ua{
+           background-image: url("/img/country/russia.png");
+       }
+       .us{
+           background-image: url("/img/country/united-states.png");
+       }
+       .search{
+           margin: 0 0 0 14px;
+           width: 16px;
+           height: 16px;
+           background-repeat: no-repeat;
+           background-position: center;
+           background-size: cover;
+           background-image: url("/img/search.png");
+       }
+   }
+}

@@ -1,0 +1,16 @@
+.button-1{
+    font-family: "Roboto";
+    padding: 12px 24px;
+    background-color:#E68107;
+    color: #ffffff;
+    font-weight: 500;
+    border: 1px solid #E68107 ;
+    border-radius: 5px; transition: .4s;
+    display: inline-block;
+    text-align: center;
+    width: max-content;
+    &:hover{
+        background-color: transparent;
+        color:#E68107;
+    }
+}
