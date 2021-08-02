@@ -68,7 +68,7 @@
       }
       .icon{
         display: block;
-        padding: 5px;
+        padding: 10px;
         border: 1px solid #ffffff;
         width: 40px;
         height: 40px;
@@ -94,7 +94,7 @@
         padding: 18px;
         border: 1px solid #ffffff;
         transition: 0.4s;
-        img{
+        .icon{
           width: 100%;
           height: 100%;
           object-fit: contain;
@@ -116,5 +116,8 @@
     background-color: $color_1;
     padding: 15px 0;
     text-align: center;
+    .text{
+      color: #ffffff;
+    }
   }
 }
