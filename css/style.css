@@ -782,6 +782,51 @@ textarea.error {
   font-weight: 500;
 }
 
+.question-answer_page .question-answer_wrap {
+  padding: 150px 0 50px;
+  border-bottom: 2px solid #3ead43;
+}
+.question-answer_page .question-answer_wrap .item {
+  border-bottom: 1px solid #d4d4d4;
+  position: relative;
+  margin-bottom: 20px;
+}
+.question-answer_page .question-answer_wrap .question {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-right: 30px;
+  transition: 0.4s;
+  background-color: #ffffff;
+}
+.question-answer_page .question-answer_wrap .question.color {
+  color: #3ead43;
+}
+.question-answer_page .question-answer_wrap .answer {
+  padding-left: 30px;
+}
+.question-answer_page .question-answer_wrap .answer > * {
+  transition: 0.4s margin;
+}
+.question-answer_page .question-answer_wrap .arrow {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #3ead43;
+  position: absolute;
+  top: 4px;
+  right: 0;
+  transition: 0.4s;
+}
+.question-answer_page .question-answer_wrap .arrow.rotate {
+  transform: rotate(45deg);
+}
+.question-answer_page .question-answer_wrap .hide > * {
+  opacity: 0;
+  margin: 0;
+  height: 0;
+}
+
 .footer .footer_top {
   padding: 30px;
   background-color: #282828;

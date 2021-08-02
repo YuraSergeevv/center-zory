@@ -26,6 +26,13 @@ $(document).ready(function () {
 
     /*попап*/
 
+    $('.arrow').on('click touchend', function () {
+        $(this).siblings(".question").toggleClass("color");
+        $(this).siblings(".answer").toggleClass("hide");
+        $(this).toggleClass("rotate");
+
+    });
+
     function openPopup(id) {
         $(".js-popup[data-id-popup='" + id + "']").fadeIn(300);
     }
