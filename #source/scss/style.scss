@@ -96,6 +96,8 @@ textarea {
 @import "services.scss";
 @import "service.scss";
 
+@import "specialists.scss";
+
 @import "footer.scss";
 // </ПОДВАЛ>-----------------------------------------------------------------
 
@@ -195,6 +197,7 @@ textarea {
     background-color: #eaf4ea;
     .title{
         color: #333333;
+        font-weight: 300;
         margin-bottom: 10px;
         font-size: 32px;
     }

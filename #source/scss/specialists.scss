@@ -1,0 +1,71 @@
+.specialists_page{
+
+  .specialists_wrap{
+    padding: 50px 0;
+    border-bottom: 2px solid $color_1;
+
+  .specialists_inner{
+  display: flex;
+  flex-wrap: wrap;
+  }
+  .card{
+    width: calc(33.3% - 100px);
+
+    margin:0  50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:nth-child(2n+1){
+      img{
+        border-top: 3px solid #4AB24F;
+        border-bottom: 3px solid #4AB24F;
+      }
+  }
+  &:nth-child(2n){
+      img{
+        border-top: 3px solid #E68107;
+        border-bottom: 3px solid #E68107;
+      }
+  }
+  }
+
+  .img_block{
+    height: 405px;
+    text-align: center;
+    margin-bottom: 20px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 40px 10px 40px 10px;
+      transition: 0.4s;
+      &:hover{
+        width: 95%;
+        height: 95%;
+      }
+    }
+    &:hover{
+     img{
+      width: 90%;
+      height: 90%;
+     }
+    }
+  }
+
+  .name{
+    font-size: 19px;
+    color:#000000;
+    font-weight: 600;
+    width: 75%;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 15px;
+
+  }
+  .position{
+    font-size: 16px;
+    color: #E68107;
+    font-weight: 500;
+  }
+}
+}

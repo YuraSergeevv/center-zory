@@ -149,11 +149,10 @@
           img{
             border-radius: 50%;
             overflow: hidden;
-           
-              transition: 0.4s;
-              width: 90%;
-              height: 90%;
-              object-fit: contain;
+            transition: 0.4s;
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
           }
           &:hover{
             img{
