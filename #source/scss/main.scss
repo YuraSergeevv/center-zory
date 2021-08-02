@@ -3,7 +3,7 @@
     width: 100%;
     height: 650px;
     .swiper-slide{
-        background-image: url('/img/swiper.jpg');
+        background-image: url('img/swiper.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -96,7 +96,7 @@
       padding-top: 50px;
       padding-bottom: 50px;
       background-color: #ff0000;
-      background-image: url('/img/services/bg-serv.jpg');
+      background-image: url('img/services/bg-serv.jpg');
       position: relative;
       border-bottom: 2px solid $color_1;
       &::after{

@@ -100,13 +100,13 @@
         background-size: cover;
        }
        .ru{
-           background-image: url("/img/country/ukraine.png");
+           background-image: url("img/country/ukraine.png");
        }
        .ua{
-           background-image: url("/img/country/russia.png");
+           background-image: url("img/country/russia.png");
        }
        .us{
-           background-image: url("/img/country/united-states.png");
+           background-image: url("img/country/united-states.png");
        }
        .search{
            margin: 0 0 0 14px;
@@ -115,7 +115,7 @@
            background-repeat: no-repeat;
            background-position: center;
            background-size: cover;
-           background-image: url("/img/search.png");
+           background-image: url("img/search.png");
        }
    }
 }

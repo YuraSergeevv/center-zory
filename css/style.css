@@ -324,13 +324,13 @@ li.counter li:before {
   background-size: cover;
 }
 .header .header_bottom .ru {
-  background-image: url("/img/country/ukraine.png");
+  background-image: url("img/country/ukraine.png");
 }
 .header .header_bottom .ua {
-  background-image: url("/img/country/russia.png");
+  background-image: url("img/country/russia.png");
 }
 .header .header_bottom .us {
-  background-image: url("/img/country/united-states.png");
+  background-image: url("img/country/united-states.png");
 }
 .header .header_bottom .search {
   margin: 0 0 0 14px;
@@ -339,7 +339,7 @@ li.counter li:before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url("/img/search.png");
+  background-image: url("img/search.png");
 }
 
 input.error,
@@ -370,7 +370,7 @@ textarea.error {
   height: 650px;
 }
 .main .swiper-container .swiper-slide {
-  background-image: url("/img/swiper.jpg");
+  background-image: url("img/swiper.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -457,7 +457,7 @@ textarea.error {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #ff0000;
-  background-image: url("/img/services/bg-serv.jpg");
+  background-image: url("img/services/bg-serv.jpg");
   position: relative;
   border-bottom: 2px solid #3ead43;
 }
@@ -870,7 +870,7 @@ textarea.error {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   transition: 0.4s;
   cursor: pointer;
-  background: #fff url(../img/svg/close.svg) 50% 50%/65% no-repeat;
+  background: #fff url(..img/svg/close.svg) 50% 50%/65% no-repeat;
 }
 
 .scroll-up {
