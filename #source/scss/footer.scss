@@ -6,10 +6,18 @@
 
     .top_inner{
       display: flex;
+      flex-wrap: wrap;
     }
     .column{
       width: 25%;
       padding: 0 15px;
+      @media (max-width: 1200px) {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+      @media (max-width: 600px) {
+        width: 100%;
+      }
     }
     .logo{
       display: block;

@@ -1,24 +1,28 @@
-.services_page{
+.equipment_page {
 
-  .main_title{
+  .main_title {
     margin-top: 40px;
     margin-bottom: 40px;
   }
-  .services_wrap{
+
+  .services_wrap {
     border-bottom: 2px solid $color_1;
   }
-  .services_inner{
+
+  .services_inner {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 50px;
   }
-  .service_card{
+
+  .service_card {
     width: calc(33.3% - 20px);
-    margin:0 10px 20px;
+    margin: 0 10px 20px;
     height: 325px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
     &:nth-child(2n+1) {
       .photo {
         img {
@@ -37,7 +41,8 @@
       }
     }
   }
-  .photo{
+
+  .photo {
     height: 270px;
     width: 100%;
     margin-bottom: 20px;
@@ -45,31 +50,34 @@
     align-items: center;
     justify-content: center;
 
-    &:hover{
-     img{
-       height: 95%;
-       width: 95%;
-     }
+    &:hover {
+      img {
+        height: 95%;
+        width: 95%;
+      }
     }
-    img{
+
+    img {
       height: 100%;
       width: 100%;
       object-fit: cover;
       transition: 0.4s;
       overflow: hidden;
-      border-radius:  40px 10px 40px 10px;
+      border-radius: 40px 10px 40px 10px;
       border-top: 1px solid $color_1;
       border-bottom: 1px solid $color_1;
 
     }
   }
-  .title{
+
+  .title {
     text-align: center;
     font-size: 19px;
     color: #333333;
     font-weight: 600;
     transition: 0.4s;
-    &:hover{
+
+    &:hover {
       color: $color_1;
     }
   }

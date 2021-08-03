@@ -1,5 +1,6 @@
 .button-1{
     font-family: "Roboto";
+    cursor: pointer;
     padding: 12px 24px;
     background-color:#E68107;
     color: #ffffff;
@@ -9,8 +10,30 @@
     display: inline-block;
     text-align: center;
     width: max-content;
+    input{
+        display: none;
+    }
     &:hover{
         background-color: transparent;
         color:#E68107;
+    }
+}
+
+.button-2       {
+    font-family: "Roboto";
+    cursor: pointer;
+    padding: 12px 24px;
+    background-color:$color-1;
+    color: #ffffff;
+    font-weight: 500;
+    transition: .4s;
+    display: inline-block;
+    text-align: center;
+    width: max-content;
+    input{
+        display: none;
+    }
+    &:hover{
+        background-color:#E68107;
     }
 }

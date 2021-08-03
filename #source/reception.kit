@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Оболочка документа -->
+<html lang="ru">
+
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+    <title>Главная</title>
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <link rel="shortcut icon" href="img/icons/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+    <!-- ОБОЛОЧКА -->
+    <div class="wrapper reception">
+        <!-- @import "header.kit" -->
+        <div class="title_block">
+            <div class="title">Записаться на прием</div>
+            <div class="breadcrumbs">
+                <a href="" class="breadcrumbs_item">
+                    <svg class="icon">
+                        <use xlink:href="img/svg/sprite.svg#home"></use>
+                    </svg>
+                </a>
+                <a href="" class="breadcrumbs_item">Записаться на прием</a>
+            </div>
+        </div>
+        <div class="reception_wrap">
+            <div class="container">
+                <div class="reception_inner">
+                    <div class="column image">
+                            <img class="img" src="img/appointment.jpg" alt="">
+                    </div>
+                    <div class="column form">
+                        <form action="">
+                            <input class="input error" type="text" name="name" placeholder="Имя">
+                            <input class="input" type="text" name="phone" placeholder="Телефон">
+                            <input class="input" type="text" name="e-mail   " placeholder="E-Mail">
+                            <textarea class="textarea"  name="message" id="" cols="30" rows="10"  placeholder="Сообщение" ></textarea>
+                            <div class="button-2"><input type="submit"><span>Отправить</span></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- @import "footer.kit" -->
+    </div>
+
+    <!-- @import "popup.kit" -->
+
+    <!-- @import "bottom.kit" -->
+
+</body>
+
+</html>

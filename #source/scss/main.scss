@@ -37,6 +37,9 @@
       padding-bottom: 40px;
       .us_inner{
           display: flex;
+        @media(max-width: 767px){
+          flex-direction: column;
+        }
       }
       .us_item{
           display: flex;
@@ -81,11 +84,28 @@
       background-color:#f1f1f1 ;
       .about_inner{
           display: flex;
+        @media(max-width: 767px){
+          flex-direction: column;
+        }
       }
       .block{
           width: calc(50% - 20px);
           margin: 10px;
       }
+    .b-img{
+      @media(max-width: 767px){
+        margin: 0 auto 20px;
+        width: 70%;
+      }
+      @media(max-width: 500px){
+        width: 100%;
+      }
+    }
+    .b-text{
+      @media(max-width: 767px){
+        width: 100%;
+      }
+    }
       .more{
           margin-bottom: 20px;
       }
@@ -96,6 +116,9 @@
       padding-bottom: 50px;
       background-color: #ff0000;
       background-image: url('../img/services/bg-serv.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
       position: relative;
       border-bottom: 2px solid $color_1;
       &::after{
@@ -114,6 +137,9 @@
     }
       .main_title{
           margin-bottom: 80px;
+        @media (max-width: 800px) {
+          margin-bottom: 30px;
+        }
       }
       .services_inner{
         display: flex;
@@ -122,11 +148,20 @@
 
       }
       .item_block{
-          width: calc(25% - 20px);
+          width: calc(100% / 4  - 20px);
           align-items: center;
           display: flex;
           flex-direction: column;
           margin: 0 10px 20px;
+        @media (max-width: 1200px){
+          width: calc(100% / 3  - 20px);
+        }
+        @media (max-width: 800px){
+          width: calc(100% / 2  - 20px);
+        }
+        @media (max-width: 500px){
+          width: calc(100% / 1 );
+        }
           &:nth-child(2n+1){
             img{
               border: 3px solid #4AB24F;
@@ -141,7 +176,6 @@
       .icon{
           width: 100px;
           height: 100px;
-          display: block;
           margin-bottom: 20px;
           display: flex;
           align-items: center;
@@ -174,6 +208,9 @@
 
     .map_wrap{
         padding-bottom: 60px;
+      @media (max-width: 767px) {
+        padding-bottom: 30px;
+      }
     .contact_block{
         display: inline-block;
         min-width: 400px;
@@ -183,6 +220,10 @@
         margin-top: -200px;
         background-color: #ffffff;
         box-shadow: rgba(0, 0, 0, 0.39) -4px 12px 38px 6px;
+      @media (max-width: 500px) {
+        min-width: initial;
+        padding: 15px 15px 15px 30px;
+      }
     }
     .title{
         font-size: 30px;
