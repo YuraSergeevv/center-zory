@@ -1216,8 +1216,102 @@ textarea.error {
 .reception .input.error::placeholder, .reception .error.textarea::placeholder {
   color: #ff0000;
 }
+.price_item .price_wrap {
+  border-bottom: 2px solid #3ead43;
+}
+.price_item .price_wrap .price_inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+.price_item .price_wrap .big_column {
+  width: 75%;
+  padding: 50px 30px 50px 0px;
+  border-right: 1px solid #f1f1f1;
+  margin: 0 -10px;
+}
+.price_item .price_wrap .big_column .main_title span {
+  font-weight: 600;
+}
+.price_item .price_wrap .big_column .table {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.price_item .price_wrap .big_column .row {
+  display: flex;
+  width: 100%;
+  transition: 0.4s;
+}
+.price_item .price_wrap .big_column .row:nth-child(2n) {
+  background-color: rgba(0, 0, 50, 0.02);
+}
+.price_item .price_wrap .big_column .row:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.price_item .price_wrap .big_column .title_row {
+  font-weight: 700;
+}
+.price_item .price_wrap .big_column .title_row:hover {
+  background-color: #ffffff;
+}
+.price_item .price_wrap .big_column .column {
+  padding: 15px 10px;
+  border: 1px solid rgba(34, 34, 34, 0.1);
+}
+.price_item .price_wrap .big_column .name {
+  width: 80%;
+}
+.price_item .price_wrap .big_column .value {
+  width: 20%;
+  text-align: center;
+}
+.price_item .price_wrap .small_column {
+  width: 25%;
+  padding: 30px 0 0 30px;
+}
+.price_item .price_wrap .small_column .title {
+  padding-left: 15px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  border-left: 2px solid #3ead43;
+  line-height: 1;
+}
+.price_item .price_wrap .small_column .block_links {
+  display: flex;
+  flex-direction: column;
+}
+.price_item .price_wrap .small_column .link {
+  position: relative;
+  padding-left: 20px;
+  color: #333333;
+  font-size: 15px;
+  margin-bottom: 15px;
+  transition: 0.4s;
+}
+.price_item .price_wrap .small_column .link:hover {
+  margin-left: 7px;
+  color: #3ead43;
+}
+.price_item .price_wrap .small_column .link:hover:before {
+  border: 1px solid #3ead43;
+}
+.price_item .price_wrap .small_column .link:before {
+  transition: inherit;
+  position: absolute;
+  line-height: 1;
+  content: "";
+  top: 2px;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid #333333;
+}
+
 .footer .footer_top {
-  padding: 30px;
+  padding: 30px 0;
   background-color: #282828;
   font-size: 15px;
 }
@@ -1238,6 +1332,7 @@ textarea.error {
 @media (max-width: 600px) {
   .footer .footer_top .column {
     width: 100%;
+    padding: 0;
   }
 }
 .footer .footer_top .logo {
