@@ -173,9 +173,8 @@
       font-weight: 600;
       font-size: 15px;
       border: 1px solid #f1f1f1;
-
       &:hover {
-        background-color: rgba(0, 0, 255, 0.02);
+        background-color: rgba(0, 0, 255, 0.05);
       }
 
       &:last-of-type {
@@ -221,19 +220,60 @@
     }
 
     .search {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 0 0 0 14px;
       width: 16px;
       height: 16px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      background-image: url("/img/search.png");
+      padding: 45px 0px;
+    }
+    .input_block{
+      position: absolute;
+      background-color: #ffffff;
+      border-top: 2px solid $color_1;
+      top: 100%;
+      right: 0;
+      box-shadow: 0 2px 7px rgba(0,0,0,0.1  );
+      padding: 15px;
+      width: 260px;
+      pointer-events: none;
+      opacity: 0;
+      z-index: -1;
+      transition: 0.4s;
+      &.active{
+        opacity: 1;
+        z-index: 10;
+      }
+    }
+    .input {
+      padding: 6px 12px;
+      font-size: 14px;
+      color: #333333;
+      border: 1px solid #ddd;
+      min-height: 40px;
+      display: inline-block;
+      width: 100%;
+
+      &::placeholder {
+        font-size: inherit;
+        color: inherit;
+      }
+
+      &:focus, &:active {
+        &::placeholder {
+          font-size: 0;
+        }
+      }
     }
 
     .burger_block {
+      cursor: pointer;
       height: 90px;
       margin-right: 50px;
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       @media (max-width: 1200px) {
@@ -279,5 +319,48 @@
         font-size: 16px;
       }
     }
+  }
+
+
+}
+
+.wrapper{
+  transition: 0.5s;
+  margin-left: 0;
+  &:after{
+    transition: inherit;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
+    content: '';
+    z-index: 998;
+    opacity: 0;
+    pointer-events: none;
+  }
+ &.active{
+   overflow: hidden;
+   position: relative;
+   padding-left:  50%;
+   &:after{
+     opacity: 1;
+     pointer-events: initial;
+   }
+ }
+}
+.mob_menu{
+  background-color: #ffffff;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 999;
+  transform: translateX(-100%);
+  transition: 0.5s;
+  &.active{
+    transform: translateX(0);
   }
 }

@@ -43,6 +43,25 @@ $(document).ready(function () {
         return false;
     });
 
+    $('.search-js').on('click touchend', function () {
+        $(this).find(".search-block-js").toggleClass("active");
+        return false;
+    });
+
+    $('.menu-js').on('click touchend', function () {
+        $('.mob-menu-js').addClass('active');
+        $('.wrapper').addClass('active');
+        return false;
+    });
+
+
+    $('.wrapper').on('click touchend', function () {
+       if ($(this).has('back_layer')){
+           $('.mob-menu-js').removeClass('active');
+           $('.wrapper').removeClass('active');
+       }
+        return false;
+    });
     function openPopup(id) {
         $(".js-popup[data-id-popup='" + id + "']").fadeIn(300);
     }
@@ -64,6 +83,7 @@ $(document).ready(function () {
         if (!popup.is(e.target) && popup.has(e.target).length === 0)
             close_popup();
     });
+
 
 });
 /*кнопка прокрутки вверх*/

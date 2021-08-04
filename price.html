@@ -65,8 +65,13 @@
                 <div class="navigation_bar">
                     <nav class="menu">
                         <ul class="menu_list">
-                            <li class="menu_item"><a href="index.htmlc" class="menu_link active">Главная</a></li>
-                            <li class="menu_item"><a href="#" class="menu_link">О нас</a></li>
+                            <li class="menu_item"><a href="index.html" class="menu_link active">Главная</a></li>
+                            <li class="menu_item hover_2"><a href="#" class="menu_link ">О нас</a>
+                                <span class="level_2-block">
+                                    <a href="#" class="link_2">О нас</a>
+                                    <a href="#" class="link_2">О нас</a>
+                                </span>
+                            </li>
                             <li class="menu_item"><a href="services.html" class="menu_link">Услуги</a></li>
                             <li class="menu_item"><a href="specialists.html" class="menu_link">Спецеалисты</a></li>
                             <li class="menu_item"><a href="#" class="menu_link">Контакты</a></li>
@@ -78,16 +83,21 @@
                         <a href="#" class="language_item ru"></a>
                         <a href="#" class="language_item us"></a>
                     </div>
-                    <div class="search"></div>
+                    <div class="search search-js">
+                        <img src="img/search.png" alt="">
+                        <div class="input_block search-block-js ">
+                            <input class="input" type="text" placeholder="Поиск">
+                        </div>
+                    </div>
                 </div>
-                <div class="burger_block">
+                <div class="burger_block menu-js">
                     <div class="burger_button"><span></span></div>
                     <div class="burger_text">Меню</div>
                 </div>
             </div>
         </div>
     </div>
-
+    <div class="mob_menu mob-menu-js"></div>
 </header>    <div class="title_block">
         <div class="title">Прайс-лист центра зрения</div>
         <div class="breadcrumbs">
@@ -330,7 +340,7 @@
 <!-- кнопка прокрутки вверх -->
 <div class="scroll-up js-scroll-up">
     <svg class="scroll-up__svg" viewBox="-2 -2 52 52">
-        <path class="scroll-up__path js-scroll-up__path" d="M24,0 a24,24 0 0,1 0,48 a24,24 0 0,1 0,-48" />
+        <path class="scroll-up__path js-scroll-up__path" fill="#ffffff" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
     </svg>
 </div>
 
@@ -338,6 +348,8 @@
 <script src="libs/jquery/jquery.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
+
+
 </body>
 
 </html>
