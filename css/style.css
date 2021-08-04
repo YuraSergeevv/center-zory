@@ -772,6 +772,12 @@ textarea.error {
   font-size: 25px;
   font-weight: 700;
 }
+.appointment_wrap .text .icon {
+  width: 35px;
+  height: 35px;
+  margin: -2px;
+  margin-right: 20px;
+}
 @media (max-width: 1100px) {
   .appointment_wrap .text {
     text-align: center;
@@ -790,6 +796,14 @@ textarea.error {
   transition: 0.4s;
   display: inline-block;
 }
+.appointment_wrap .button_appointment .icon {
+  width: 18px;
+  height: 18px;
+  fill: #ffffff;
+  margin: -2px;
+  transition: 0.4s;
+  margin-left: 15px;
+}
 @media (max-width: 1100px) {
   .appointment_wrap .button_appointment {
     font-size: 18px;
@@ -797,7 +811,10 @@ textarea.error {
 }
 .appointment_wrap .button_appointment:hover {
   background-color: transparent;
-  color: #E68107;
+  color: #4Ab24f;
+}
+.appointment_wrap .button_appointment:hover .icon {
+  fill: #4Ab24f;
 }
 
 .services_page .main_title {
@@ -1383,33 +1400,15 @@ textarea.error {
   width: 45px;
   height: 45px;
   cursor: pointer;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 3px #dcdcdc;
+  background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.4s ease 0s;
   transform: translateY(25px);
   opacity: 0;
   visibility: hidden;
 }
-.scroll-up:before {
-  content: "";
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  border: 3px solid red;
-  width: 10px;
-  height: 10px;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  transition: inherit;
-  opacity: 0.6;
-}
-.scroll-up__path {
-  box-sizing: border-box;
-  fill: none;
-  stroke: red;
-  stroke-width: 3px;
-  transition: all 0.4s ease 0s;
+.scroll-up .scroll-up__path {
+  width: 30px;
+  height: 30px;
 }
 .scroll-up.scroll-up_active {
   opacity: 1;

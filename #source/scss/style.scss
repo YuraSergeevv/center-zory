@@ -117,34 +117,15 @@ textarea {
     width: 45px;
     height: 45px;
     cursor: pointer;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 3px #dcdcdc;
+    background-color: rgba(0,0,0,0.4);
     @include anim(0.4s, 0s);
     transform: translateY(25px);
     opacity: 0;
     visibility: hidden;
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(45deg);
-        border: 3px solid red;
-        width: 10px;
-        height: 10px;
-        border-right-width: 0;
-        border-bottom-width: 0;
-        transition: inherit;
-        opacity: 0.6;
-    }
-
-    &__path {
-        box-sizing: border-box;
-        fill: none;
-        stroke: red;
-        stroke-width: 3px;
-        @include anim(0.4s, 0s);
+    .scroll-up__path{
+        width: 30px;
+        height: 30px;
     }
 
     &.scroll-up_active {

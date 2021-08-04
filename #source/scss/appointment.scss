@@ -11,6 +11,13 @@
         }
     }
     .text{
+        .icon{
+            width: 35px;
+            height: 35px;
+            margin: -2px;
+            margin-right: 20px;
+
+        }
         color: #E68107;;
         font-size: 25px;
         font-weight: 700;
@@ -21,20 +28,32 @@
         }
     }
     .button_appointment{
+        .icon{
+            width: 18px;
+            height: 18px;
+            fill:#ffffff;
+            margin: -2px;
+            transition: .4s;
+            margin-left: 15px;
+        }
         padding: 15px 30px;
         background-color:#4ab24f;
         color: #ffffff;
         font-weight: 500;
         font-size: 20px;
         border: 1px solid #4Ab24f ;
-        border-radius: 5px; transition: .4s;
+        border-radius: 5px;
+        transition: .4s;
         display: inline-block;
         @media (max-width: 1100px) {
             font-size: 18px;
         }
         &:hover{
             background-color: transparent;
-            color:#E68107;
+            color:#4Ab24f;
+            .icon{
+                fill:#4Ab24f;
+            }
         }
     }
 }
