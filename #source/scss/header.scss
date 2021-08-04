@@ -1,208 +1,283 @@
-.header{
-   
-   .header_top{
+.header {
+
+  .header_top {
     padding: 8px 0;
     background-color: $color_1;
-    .top_row{
+
+    .top_row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      font-size: 15px;
+      color: #ffffff;
+      @media (max-width: 1400px) {
+        flex-direction: column;
+        justify-content: center;
+      }
+      @media (max-width: 767px) {
+        font-size: 12px;
+      }
+    }
+
+    .block_phones {
+      display: flex;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      .phone + .phone {
+        margin-left: 10px;
+        @media (max-width: 767px) {
+          margin-left: 0;
+          margin-top: 5px;
+        }
+      }
+
+      .icon {
+        height: 12px;
+        width: 12px;
+        margin-bottom: -2px;
+      }
+
+      @media (max-width: 1400px) {
+        margin-bottom: 5px;
+      }
+    }
+
+    .block_info {
+      display: flex;
+      @media (max-width: 767px) {
+        text-align: center;
+        flex-direction: column;
+      }
+
+      .info_item + .info_item {
+        margin-left: 10px;
+        @media (max-width: 767px) {
+          margin-left: 0;
+          margin-top: 5px;
+        }
+      }
+
+      .icon {
+        height: 12px;
+        width: 12px;
+        margin-bottom: -2px;
+      }
+    }
+  }
+
+  .header_bottom {
+    .bottom_row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .logo_block {
+      position: relative;
+      width: 180px;
+      @media (max-width: 767px) {
+        width: 100px;
+      }
+    }
+
+    .logo {
+      position: absolute;
+      width: inherit;
+      height: 195px;
+      top: 0;
+      left: 0;
+      padding: 0 10px 5px;
+      transition: 0.4s;
+      background-color: rgba(255, 255, 255, 0.3);
+      z-index: 100;
+      box-shadow: 0px 45px 50px 0px rgba(0, 0, 0, 0.27);
+      @media (max-width: 767px) {
+        height: 100px;
+      }
+
+      img {
         width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .navigation_bar {
+      display: flex;
+      align-items: center;
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+
+    .menu_list {
+      display: flex;
+    }
+
+    .menu_item {
+      padding: 0 14px;
+    }
+
+    .menu_link {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Roboto';
+      font-weight: 500;
+      font-size: 16px;
+      color: $color_1;
+      transition: 0.4s;
+
+      &:hover {
+        color: $color_2;
+      }
+
+      &.active {
+        color: $color_2;
+      }
+    }
+
+    .level_2-block {
+      border-top: 2px solid $color_1;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 12;
+      min-width: 225px;
+      flex-direction: column;
+      background-color: #ffffff;
+      display: none;
+    }
+
+    .hover_2 {
+      position: relative;
+
+      &:hover {
+        .level_2-block {
+          display: flex;
+        }
+      }
+    }
+
+    .link_2 {
+      padding: 12px 15px;
+      color: #333333;
+      font-weight: 600;
+      font-size: 15px;
+      border: 1px solid #f1f1f1;
+
+      &:hover {
+        background-color: rgba(0, 0, 255, 0.02);
+      }
+
+      &:last-of-type {
+        border: none;
+      }
+    }
+
+    .sign_up {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      background-color: $color_2;
+      padding: 14px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+
+    }
+
+    .language {
+      display: flex;
+    }
+
+    .language_item {
+      margin: 0 14px;
+      width: 24px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .ru {
+      background-image: url("/img/country/ukraine.png");
+    }
+
+    .ua {
+      background-image: url("/img/country/russia.png");
+    }
+
+    .us {
+      background-image: url("/img/country/united-states.png");
+    }
+
+    .search {
+      margin: 0 0 0 14px;
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-image: url("/img/search.png");
+    }
+
+    .burger_block {
+      height: 90px;
+      margin-right: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: 1200px) {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+      }
+      @media (max-width: 767px) {
+        margin-right: 0px;
+      }
+
+      .burger_button {
+        width: 16px;
+        height: 14px;
+        position: relative;
+        margin-right: 10px;
+
+        span, &:after, &:before {
+          width: 100%;
+          height: 2px;
+          background-color: #3ead43;
+          position: absolute;
+          content: '';
+          left: 0;
+        }
+
+        &:after {
+          top: 0;
+        }
+
+        span {
+          top: calc(50% - 1px);
+        }
+
+        &:before {
+          bottom: 0;
+        }
+
+      }
+
+      .burger_text {
+        font-family: 'Roboto';
         font-weight: 500;
-        font-size: 15px;
-        color:#ffffff;
-        @media (max-width: 1400px) {
-            flex-direction: column;
-            justify-content: center;
-        }
-        @media (max-width: 767px) {
-            font-size: 12px;
-        }
+        color: #3ead43;
+        font-size: 16px;
+      }
     }
-    .block_phones{
-        display: flex;
-        @media (max-width: 767px) {
-            flex-direction: column;
-        }
-        .phone +.phone{
-            margin-left: 10px;
-            @media (max-width: 767px) {
-                margin-left: 0;
-                margin-top: 5px;
-            }
-        }
-        .icon{
-            height: 12px;
-            width: 12px;
-            margin-bottom: -2px;
-        }
-        @media (max-width: 1400px) {
-            margin-bottom: 5px;
-        }
-    }
-    .block_info{
-        display: flex;
-        @media (max-width: 767px) {
-            text-align: center  ;
-            flex-direction: column;
-        }
-        .info_item+.info_item{
-            margin-left: 10px;
-            @media (max-width: 767px) {
-                margin-left: 0;
-                margin-top: 5px;
-            }
-        }
-        .icon{
-            height: 12px;
-            width: 12px;
-            margin-bottom: -2px;
-        }
-    }
-   }
-   .header_bottom{
-       .bottom_row{
-           display: flex;
-            justify-content: space-between;
-       }
-       .logo_block{
-           position: relative;
-           width: 180px;
-           @media (max-width: 767px) {
-               width: 100px;
-           }
-       }
-       .logo{
-           position: absolute;
-           width: inherit;
-           height: 195px;
-           top: 0;
-           left: 0;
-           padding: 0 10px 5px;
-           transition: 0.4s;
-           background-color: rgba(255,255,255,0.3);
-           z-index: 100;
-           box-shadow:  0px 45px 50px 0px rgba(0, 0, 0, 0.27);
-           @media (max-width: 767px) {
-               height: 100px;
-           }
-           img{
-               width: 100%;
-               height: 100%;
-               object-fit: contain;
-           }
-           &:hover{
-               opacity: 0.7;
-           }
-       }
-       .navigation_bar{
-           display: flex;
-           align-items: center;
-           @media (max-width: 1200px) {
-               display: none;
-           }
-       }
-       .menu_list{
-           display: flex;
-       }
-       .menu_item{
-           padding: 0 14px;
-       }
-       .menu_link{
-           font-family: 'Roboto';
-           font-weight: 500;
-           font-size: 16px;
-           color: $color_1;
-           transition: 0.4s;
-           &:hover{
-            color: $color_2;
-           }
-           &.active{
-               color: $color_2;
-           }
-       }
-       .sign_up{
-           color: #ffffff;
-           font-size: 16px;
-           font-weight: 600;
-           background-color: $color_2;
-           padding: 14px;
-           height: 90px;
-           display: flex;
-           align-items: center;
-
-       }
-       .language{
-           display: flex;
-       }
-       .language_item{
-           margin: 0 14px;
-           width: 24px;
-           height: 18px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-       }
-       .ru{
-           background-image: url("/img/country/ukraine.png");
-       }
-       .ua{
-           background-image: url("/img/country/russia.png");
-       }
-       .us{
-           background-image: url("/img/country/united-states.png");
-       }
-       .search{
-           margin: 0 0 0 14px;
-           width: 16px;
-           height: 16px;
-           background-repeat: no-repeat;
-           background-position: center;
-           background-size: cover;
-           background-image: url("/img/search.png");
-       }
-       .burger_block{
-           height: 90px;
-           margin-right: 50px;
-           display: flex;
-            align-items: center;
-           justify-content: center;
-           @media (max-width: 1200px) {
-               display: flex;
-           }
-           @media (max-width: 767px) {
-               margin-right: 0px;
-           }
-           .burger_button{
-               width: 16px;
-               height: 14px;
-               position: relative;
-               margin-right: 10px;
-               span,&:after,&:before{
-                   width: 100%;
-                   height: 2px;
-                   background-color: #3ead43 ;
-                   position: absolute;
-                   content: '';
-                   left: 0;
-               }
-               &:after{
-                   top: 0;
-               }
-               span{
-                   top: calc(50% - 1px);
-               }
-               &:before{
-                   bottom: 0;
-               }
-
-           }
-           .burger_text{
-               font-family: 'Roboto';
-               font-weight: 500;
-               color: #3ead43 ;
-               font-size: 16px;
-           }
-       }
-   }
+  }
 }

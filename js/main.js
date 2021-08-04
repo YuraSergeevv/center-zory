@@ -21,6 +21,7 @@ $(document).ready(function () {
         scrollbar: {
             hide: false,
         },
+        speed:800,
 
     });
 
