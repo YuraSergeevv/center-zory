@@ -21,7 +21,7 @@ $(document).ready(function () {
         scrollbar: {
             hide: false,
         },
-        speed:800,
+        speed: 800,
 
     });
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
 
     $('.arrow').on('click touchend', function () {
         $(this).siblings(".question").toggleClass("color");
-        $(this).siblings(".answer").slideToggle( "slow" );
+        $(this).siblings(".answer").slideToggle("slow");
         $(this).toggleClass("rotate");
         return false;
     });
@@ -50,18 +50,21 @@ $(document).ready(function () {
 
     $('.menu-js').on('click touchend', function () {
         $('.mob-menu-js').addClass('active');
-        $('.wrapper').addClass('active');
+        $('.back_layer').addClass('active');
+        $('body ').addClass('active');
         return false;
     });
 
 
-    $('.wrapper').on('click touchend', function () {
-       if ($(this).has('back_layer')){
-           $('.mob-menu-js').removeClass('active');
-           $('.wrapper').removeClass('active');
-       }
+    $('.back_layer, .close').on('click touchend', function () {
+        if ($(this).has('back_layer')) {
+            $('.mob-menu-js').removeClass('active');
+            $('.back_layer').removeClass('active');
+            $('body  ').removeClass('active');
+        }
         return false;
     });
+
     function openPopup(id) {
         $(".js-popup[data-id-popup='" + id + "']").fadeIn(300);
     }
@@ -84,42 +87,31 @@ $(document).ready(function () {
             close_popup();
     });
 
-
-});
-/*кнопка прокрутки вверх*/
-
-const offset = 100;
-const scrollUp = document.querySelector('.js-scroll-up');
-const scrollUpSvgPath = document.querySelector('.js-scroll-up__path');
-const pathLength = scrollUpSvgPath.getTotalLength();
-
-scrollUpSvgPath.style.strokeDasharray = '\'' + pathLength + pathLength + '\'';
-scrollUpSvgPath.style.transition = 'stroke-dashoffset 20ms';
-
-// getTop
-const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
-
-//updateDashoffset
-
-const updateDashoffset = () => {
-    const heigth = document.documentElement.scrollHeight - window.innerHeight;
-    const dashoffset = pathLength - (getTop() * pathLength / heigth);
-
-    scrollUpSvgPath.style.strokeDashoffset = dashoffset;
-}
-
-// onScroll
-window.addEventListener('scroll', () => {
-    updateDashoffset();
-    getTop() > offset ? scrollUp.classList.add('scroll-up_active') : scrollUp.classList.remove('scroll-up_active');
-});
-
-// click
-scrollUp.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
+    $('.button_up').on('click touchend', function () {
+        $('body,html').animate({scrollTop: 0}, 1000);
+        return false;
     });
+
+
 });
 
-/*скрол по якорю*/
+let scrollPos;
+$(window).on('scroll', function () {
+    if($(window).scrollTop()+$(window).innerHeight()>$('footer').position().top){
+        $('.button_up').addClass('up_on');
+    }
+    else {
+        if ($(window).scrollTop() > $(window).innerHeight()) {
+            var st = $(this).scrollTop();
+            if (st > scrollPos) {
+                $('.button_up').removeClass('up_on');
+            } else {
+                $('.button_up').addClass('up_on');
+            }
+        } else {
+            $('.button_up').removeClass('up_on');
+        };
+    };
+    scrollPos = st;
+
+});

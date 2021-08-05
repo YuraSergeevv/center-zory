@@ -112,37 +112,44 @@ textarea {
 // </ПОПАП>------------------------------------------------------------------
 
 // <ПРОКРУТКА ВВЕРХ>---------------------------------------------------------
-.scroll-up {
+.button_up {
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    right: 20px;
+    bottom: 20px;
     z-index: 100;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     background-color: rgba(0,0,0,0.4);
     @include anim(0.4s, 0s);
     transform: translateY(25px);
     opacity: 0;
     visibility: hidden;
-
-    .scroll-up__path{
-        width: 30px;
-        height: 30px;
+    &:after,&:before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 3px;
+        border-radius: 5px;
+        top: calc(50% - 2.5px);
+        background-color: #ffffff;
+    }
+    &:after{
+        left: calc(50% - 2px);
+        transform: rotate(45deg);
+    }
+    &:before{
+        right: calc(50% - 2px);
+        transform: rotate(-45deg);
     }
 
-    &.scroll-up_active {
+
+    &.up_on {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
     }
 
-    &:hover {
-        &:before {
-            border-color: red;
-            opacity: 1;
-        }
-    }
 }
 
 // </ПРОКРУТКА ВВЕРХ>--------------------------------------------------------
