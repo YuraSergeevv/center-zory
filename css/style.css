@@ -716,6 +716,29 @@ body.active {
 .mob_menu .menu .menu_link:hover, .mob_menu .menu .link_2:hover, .mob_menu .menu .link_3:hover {
   color: #3ead43;
 }
+.mob_menu .menu .menu_item, .mob_menu .menu .menu_item_2, .mob_menu .menu .menu_item_3 {
+  position: relative;
+}
+.mob_menu .menu .menu_item .icon, .mob_menu .menu .menu_item_2 .icon, .mob_menu .menu .menu_item_3 .icon {
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 10px;
+  height: 10px;
+  top: 22px;
+  left: 0;
+}
+.mob_menu .menu .menu_item_2 {
+  margin-left: 12px;
+}
+.mob_menu .menu .menu_item_2 .link_2 {
+  margin-left: 10px;
+}
+.mob_menu .menu .menu_item_3 {
+  margin-left: 24px;
+}
+.mob_menu .menu .menu_item_3 .link_3 {
+  margin-left: 10px;
+}
 .mob_menu .search {
   margin: 40px 20px 10px;
   position: relative;
@@ -811,6 +834,17 @@ textarea.error {
   width: 100%;
   height: 100%;
   z-index: 1;
+  object-fit: cover;
+}
+.main .swiper-container .gif {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 13;
 }
 .main .swiper-container .block_info {
   margin-left: 5%;
@@ -1772,9 +1806,16 @@ textarea.error {
   flex-direction: column;
   margin-bottom: 40px;
 }
+.contact_page .icon {
+  width: 18px;
+  height: 18px;
+  margin-bottom: -2px;
+  margin-right: 5px;
+}
 .contact_page .info_title {
+  border-left: 5px solid #dd861e;
   background-color: #f1f1f1;
-  padding: 5px 30px;
+  padding: 5px 20px;
   color: #000000;
   font-size: 19px;
   font-weight: 800;

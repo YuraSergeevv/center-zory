@@ -545,9 +545,31 @@ body {
       position: relative;
       border-bottom: 1px solid rgba(0, 0, 0, 0.035);
       transition: 0.4s;
-
       &:hover {
         color: $color_1;
+      }
+    }
+    .menu_item,.menu_item_2,.menu_item_3{
+      position: relative;
+      .icon{
+        position: absolute;
+        transform: rotate(-90deg);
+        width: 10px;
+        height: 10px;
+        top: 22px;
+        left: 0;
+      }
+    }
+    .menu_item_2{
+      margin-left: 12px;
+      .link_2{
+        margin-left: 10px;
+      }
+    }
+    .menu_item_3{
+      margin-left: 24px;
+      .link_3{
+        margin-left: 10px;
       }
     }
   }
