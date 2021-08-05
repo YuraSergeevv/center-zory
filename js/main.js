@@ -43,6 +43,11 @@ $(document).ready(function () {
         return false;
     });
 
+    $('.menu_drop').on('click touchend', function () {
+        $(this).siblings(".block_drop").slideToggle("slow");
+        return false;
+    });
+
     $('.search-js').on('click touchend', function () {
         $(this).find(".search-block-js").toggleClass("active");
         return false;
