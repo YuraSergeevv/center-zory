@@ -483,13 +483,13 @@ li.counter li:before {
   background-size: cover;
 }
 .header .ru {
-  background-image: url("/img/country/ukraine.png");
+  background-image: url("img/country/ukraine.png");
 }
 .header .ua {
-  background-image: url("/img/country/russia.png");
+  background-image: url("img/country/russia.png");
 }
 .header .us {
-  background-image: url("/img/country/united-states.png");
+  background-image: url("img/country/united-states.png");
 }
 .header .search {
   position: relative;
@@ -519,6 +519,7 @@ li.counter li:before {
 .header .input_block.active {
   opacity: 1;
   z-index: 10;
+  pointer-events: initial;
 }
 .header .input, .header .reception .textarea, .reception .header .textarea {
   padding: 6px 12px;
@@ -1393,6 +1394,42 @@ textarea.error {
   border-radius: 50%;
   border: 1px solid #333333;
 }
+.services_item .search_info {
+  padding-bottom: 30px;
+}
+.services_item .search_subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: #929292;
+  margin-bottom: 15px;
+}
+.services_item .search_item {
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(146, 146, 146, 0.4);
+}
+.services_item .search_item .search_title {
+  font-size: 24px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: 0.4s;
+}
+.services_item .search_item .search_title:hover {
+  color: #3ead43;
+}
+.services_item .search_item p {
+  color: #929292;
+}
+.services_item .search_item .search_link {
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: underline;
+  color: #333333;
+  transition: 0.4s;
+}
+.services_item .search_item .search_link:hover {
+  color: #3ead43;
+}
 
 .specialists_page .specialists_wrap {
   padding: 50px 0;
@@ -1717,10 +1754,57 @@ textarea.error {
 }
 .price_item .price_wrap .big_column .name {
   width: 80%;
+  position: relative;
+  padding-right: 30px;
+}
+.price_item .price_wrap .big_column .name:hover .up, .price_item .price_wrap .big_column .name:hover .down {
+  opacity: 1;
 }
 .price_item .price_wrap .big_column .value {
   width: 20%;
   text-align: center;
+  position: relative;
+  padding-right: 30px;
+}
+.price_item .price_wrap .big_column .value:hover .up, .price_item .price_wrap .big_column .value:hover .down {
+  opacity: 1;
+}
+.price_item .price_wrap .big_column .table_arrow {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  width: 15px;
+  height: 30px;
+  transform: translateY(-50%);
+}
+.price_item .price_wrap .big_column .up, .price_item .price_wrap .big_column .down {
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%);
+  transition: 0.4s;
+  opacity: 0;
+}
+.price_item .price_wrap .big_column .up {
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #333333;
+}
+.price_item .price_wrap .big_column .up.active {
+  opacity: 1;
+}
+.price_item .price_wrap .big_column .down {
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid #333333;
+}
+.price_item .price_wrap .big_column .down.active {
+  opacity: 1;
 }
 .price_item .price_wrap .small_column {
   width: 25%;

@@ -96,4 +96,41 @@
       }
     }
   }
+
+  .search_info{
+    padding-bottom: 30px;
+  }
+  .search_subtitle{
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(146,146,146);
+    margin-bottom: 15px;
+  }
+  .search_item{
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(146,146,146,0.4);
+    .search_title{
+      font-size: 24px;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 20px;
+      transition: 0.4s;
+      &:hover{
+        color: $color_1;
+      }
+    }
+    p{
+      color: rgb(146,146,146)
+    }
+    .search_link{
+      font-weight: 600;
+      font-size: 12px;
+      text-decoration: underline;
+      color: #333333;
+      transition: 0.4s;
+      &:hover{
+        color: $color_1;
+      }
+    }
+  }
 }

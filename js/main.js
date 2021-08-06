@@ -53,6 +53,22 @@ $(document).ready(function () {
         return false;
     });
 
+    $('.up, .down').on('click touchend', function () {
+        if($(this).has("up")){
+            $(this).addClass("active");
+            $(this).siblings(".down").removeClass("active");
+        }
+        if($(this).has("down")){
+            $(this).addClass("active");
+            $(this).siblings(".up").removeClass("active");
+        }
+        return false;
+    });
+    $('.input').on('click touchend', function () {
+        $(this).find(".search-block-js").addClass("active");
+        return false;
+    });
+
     $('.menu-js').on('click touchend', function () {
         $('.mob-menu-js').addClass('active');
         $('.back_layer').addClass('active');
