@@ -22,6 +22,12 @@
     font-size: 21px;
     font-weight: 700;
     color: #23A455;
+    margin-bottom: 15px;
+  }
+  .contact_subtitle{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 30px;
   }
   .contact_text{
     font-size: 21px;
@@ -42,17 +48,17 @@
   .info_title{
     border-left: 5px solid $color_2;
     background-color: #f1f1f1;
-    padding: 5px 20px;
+    padding: 11px 20px;
     color: #000000;
     font-size: 19px;
     font-weight: 800;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .link_tel{
     font-family: 'Roboto';
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     transition: 0.4s;
     &:hover{
       color: $color-1;
@@ -62,7 +68,7 @@
     font-family: 'Roboto';
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .image{
      img{
@@ -75,6 +81,7 @@
     }
   }
   .map_block{
+    margin-top: 20px;
     margin-bottom: 15px;
   }
 

@@ -42,13 +42,14 @@
 
     .input{
         padding: 6px 12px;
-        margin-bottom: 15px;
         font-size: 14px;
         color: #333333;
         border: 1px solid #ddd;
         min-height: 40px;
-        display: inline-block;
+        display: block;
         width: 100%;
+        margin: 0 0 15px 0px;
+
         &::placeholder{
             font-size: inherit;
             color: inherit;

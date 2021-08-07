@@ -36,10 +36,10 @@ $(document).ready(function () {
     // });
 
 
-    $('.arrow').on('click touchend', function () {
-        $(this).siblings(".question").toggleClass("color");
+    $('.question').on('click touchend', function () {
+        $(this).siblings(".arrow").toggleClass("rotate");
         $(this).siblings(".answer").slideToggle("slow");
-        $(this).toggleClass("rotate");
+        $(this).toggleClass("color");
         return false;
     });
 

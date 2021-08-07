@@ -1,8 +1,8 @@
 .services_page{
 
   .main_title{
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 58px;
+    margin-bottom: 65px;
   }
   .services_wrap{
     border-bottom: 2px solid $color_1;
@@ -10,11 +10,11 @@
   .services_inner{
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
   }
   .service_card{
     width: calc(33.3% - 20px);
-    margin:0 10px 20px;
+    margin:0 10px 55px;
     height: 325px;
     display: flex;
     flex-direction: column;
@@ -38,9 +38,9 @@
     }
   }
   .photo{
-    height: 270px;
+    height: 272px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
