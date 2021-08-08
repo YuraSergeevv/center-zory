@@ -6,6 +6,8 @@
 
 // <подключаем шрифты>------------------------------------------------------
 @import "fonts.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 // </подключаем шрифты>-----------------------------------------------------
 
 // <шрифт по умолчанию>-----------------------------------------------------
@@ -65,9 +67,15 @@ p{
 }
 .padding_30{
     padding: 0 30px 0;
+    @media (max-width: 1600px) {
+        padding: 0px
+    }
 }
 .padding_40{
     padding: 0 40px 0;
+    @media (max-width: 1600px) {
+        padding: 0 ;
+    }
 }
 
 // </КОНТЕЙНЕР>--------------------------------------------------------------
@@ -162,7 +170,7 @@ textarea {
 .main_title{
     color: #070707;
     padding-bottom: 20px;
-    margin-bottom: 5    0px;
+    margin-bottom: 50px;
     position: relative;
     font-size: 29px;
     text-align: center;

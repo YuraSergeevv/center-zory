@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 /* обнуление общих параметров */
 * {
   padding: 0;
@@ -124,9 +124,19 @@ p {
 .padding_30 {
   padding: 0 30px 0;
 }
+@media (max-width: 1600px) {
+  .padding_30 {
+    padding: 0px;
+  }
+}
 
 .padding_40 {
   padding: 0 40px 0;
+}
+@media (max-width: 1600px) {
+  .padding_40 {
+    padding: 0;
+  }
 }
 
 .row {
@@ -247,7 +257,7 @@ li.counter li:before {
   font-size: 15px;
   color: #ffffff;
 }
-@media (max-width: 1400px) {
+@media (max-width: 13 0px) {
   .header .header_top .top_row {
     flex-direction: column;
     justify-content: center;
@@ -376,7 +386,8 @@ li.counter li:before {
   fill: #dd861e;
 }
 .header .header_bottom .icon {
-  margin-left: 7px;
+  margin-top: -2px;
+  margin-left: 6px;
   fill: #3ead43;
   width: 12px;
   height: 12px;
@@ -388,7 +399,7 @@ li.counter li:before {
   align-items: center;
   justify-content: center;
   font-family: "Roboto";
-  font-weight: 5 0;
+  font-weight: 500;
   font-size: 16px;
   color: #3ead43;
   letter-spacing: 0.5px;
@@ -553,7 +564,6 @@ li.counter li:before {
 .header .burger_block {
   cursor: pointer;
   height: 90px;
-  margin-right: 50px;
   display: none;
   align-items: center;
   justify-content: center;
@@ -566,11 +576,6 @@ li.counter li:before {
 @media (hover: none) and (pointer: coarse) {
   .header .burger_block {
     display: flex;
-  }
-}
-@media (max-width: 767px) {
-  .header .burger_block {
-    margin-right: 0px;
   }
 }
 .header .burger_block .burger_button {
@@ -884,18 +889,19 @@ textarea.error {
   font-size: 24px;
   margin-bottom: 30px;
 }
-.main .swiper-container .green .swiper-btn {
-  background-color: #e69533;
-  border: 2px solid #e69533;
-}
-.main .swiper-container .yellow .swiper-btn {
+.main .swiper-container .green {
   background-color: #1C631F;
   border: 2px solid #1C631F;
 }
-.main .swiper-container .yellow .swiper-btn:hover {
+.main .swiper-container .green:hover {
   background-color: transparent;
 }
+.main .swiper-container .yellow {
+  background-color: #e69533;
+  border: 2px solid #e69533;
+}
 .main .swiper-container .swiper-btn {
+  font-family: "Roboto";
   width: max-content;
   padding: 15px 30px;
   font-size: 18px;
@@ -1000,6 +1006,7 @@ textarea.error {
   color: #ffffff;
 }
 .main .us_wrap .text {
+  font-family: "Roboto";
   text-align: center;
   color: #ffffff;
   font-size: 16px;
@@ -2019,13 +2026,13 @@ textarea.error {
   opacity: 1;
 }
 .about_page .swiper-container .swiper-button-prev, .about_page .swiper-container .swiper-button-next {
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
 }
 .about_page .swiper-container .swiper-button-prev::after, .about_page .swiper-container .swiper-button-next::after {
-  font-size: 20px;
-  font-weight: 700;
-  color: #3ead43;
+  font-size: 35px;
+  font-weight: 900;
+  color: #1a9b4c;
 }
 .about_page .about_slider {
   height: 505px;
@@ -2294,7 +2301,7 @@ textarea.error {
 .main_title {
   color: #070707;
   padding-bottom: 20px;
-  margin-bottom: 5 0px;
+  margin-bottom: 50px;
   position: relative;
   font-size: 29px;
   text-align: center;

@@ -59,23 +59,20 @@
     }
 
     .green {
-      .swiper-btn {
-        background-color: #e69533;
-        border: 2px solid #e69533;
-      }
-    }
-
-    .yellow {
-      .swiper-btn {
         background-color: #1C631F;
         border: 2px solid #1C631F;
         &:hover{
           background-color: transparent;
         }
-      }
+    }
+
+    .yellow {
+      background-color: #e69533;
+        border: 2px solid #e69533;
     }
 
     .swiper-btn {
+      font-family: "Roboto";
       width: max-content;
       padding: 15px 30px;
       font-size: 18px;
@@ -198,6 +195,7 @@
     }
 
     .text {
+      font-family:"Roboto";
       text-align: center;
       color: #ffffff;
       font-size: 16px;
