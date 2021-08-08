@@ -257,7 +257,7 @@ li.counter li:before {
   font-size: 15px;
   color: #ffffff;
 }
-@media (max-width: 13 0px) {
+@media (max-width: 1300px) {
   .header .header_top .top_row {
     flex-direction: column;
     justify-content: center;
